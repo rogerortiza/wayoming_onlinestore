@@ -9,14 +9,16 @@ class BaseProductos(models.Model):
         """ Abstact Class """
         abstract = True
 
-    GENERO = (
-        ('H', 'Hombre'),
-        ('M', 'Mujer'),
-        ('N', 'Niño'),
-        ('U', 'Unisex')
+    COLORES = (
+        ('black', 'Negro'),
+        ('brown', 'Cafe'),
+        ('yellow', 'Miel'),
+        ('blue', 'Azul'),
+        ('grey', 'Gris'),
+        ('Red', 'Rojo'),
     )
 
-    color = models.CharField(blank=True, max_length=100)
+    color = models.CharField(blank=True, max_length=100, choices=COLORES)
     size = models.CharField(blank=True, max_length=100)
     cantidad = models.IntegerField(blank=True, null=True)
 

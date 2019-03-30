@@ -1,7 +1,11 @@
+appdirs==1.4.3
 appnope==0.1.0
 astroid==1.6.5
+attrs==19.1.0
 backcall==0.1.0
+black==18.9b0
 certifi==2018.4.16
+Click==7.0
 decorator==4.3.0
 dj-database-url==0.5.0
 dj-static==0.0.6
@@ -36,6 +40,7 @@ simplegeneric==0.8.1
 simplejson==3.15.0
 six==1.11.0
 static3==0.7.0
+toml==0.10.0
 traitlets==4.3.2
 urllib3==1.22
 wcwidth==0.1.7

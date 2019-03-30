@@ -1,0 +1,12 @@
+version: '3'
+services:
+  wayoming:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wayoming_web
+    ports:
+      - 8000:8000
+    volumes:
+      - /Users/rogerortiza/Apps/wayoming/wayoming/src:/src
+    entrypoint: bash /src/start.sh

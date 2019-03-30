@@ -20,16 +20,16 @@
                         <img :src="'/'+ producto.foto">
                     </div>
                      <div class="content">
+                         <div class="text-center">
+                             <a v-for="color in producto.colores" :class="'ui '+color+' empty circular label'"></a>
+                         </div>
                         <a class="header" :href="'../detalle-producto/'+producto.id">${producto.nombre}</a>
                         <div class="meta">
                             <span class="date">${producto.descripcion}</span>
                         </div>
                      </div>
                     <div class="extra content">
-                        <span>
-                            <i class="dollar icon"></i>
-                            ${producto.precio}
-                        </span>
+                        <a class="ui orange tag label">${producto.precio}</a>
                     </div>
                 </div>
             </div>

@@ -39,12 +39,7 @@ class Productos(RegistroFecha):
     publico = models.CharField(blank=True, max_length=100, choices=GENERO)
 
     def cantidad(self):
-        result = []
-        producto = Productos.objects.get(id=self.id)
-        detalle = producto.detalleproducto_set.all().values()
-        for item in detalle:
-            result.append(item['cantidad'])
-        return sum(result)
+        return sum(self.detalleproducto_set.all().values_list('cantidad', flat=True))
 
     def __str__(self):
         return self.nombre
